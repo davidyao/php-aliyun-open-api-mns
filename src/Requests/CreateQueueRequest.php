@@ -20,7 +20,7 @@ class CreateQueueRequest extends BaseRequest
         if ($attributes == null) {
             $attributes = new QueueAttributes;
         }
-
+        $attributes->setVisibilityTimeout(36000);
         $this->queueName  = $queueName;
         $this->attributes = $attributes;
     }
